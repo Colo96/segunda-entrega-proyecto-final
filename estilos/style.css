@@ -1,0 +1,943 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&family=Ubuntu:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; 
+}
+
+#body{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header"
+                         "banner"
+                         "main"
+                         "footer";
+}
+
+#header{
+    width: 100%;
+    grid-area: header;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 10vh;
+}
+
+#header h1{
+    width: 30%;
+    text-align: center;
+    font-size: 2.4rem;
+    font-family: 'Squada One', cursive;
+    color: gold;
+}
+
+#header nav{
+    width: 70%;
+}
+
+#header nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2%;
+}
+
+#header nav ul li{
+    width: 15%;
+    list-style-type: none;
+}
+
+#header nav ul li a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 5%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+#header nav ul li a:hover{
+    background-color: silver;
+    color: black;
+    font-weight: bold;
+}
+
+#header nav ul li a:focus{
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+}
+
+#banner{
+    width: 100%;
+    grid-area: banner;
+    background-image: url(../imagenes/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vw * (513 / 1343));
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#banner ul{
+    background-color: gold;
+    width: 25%;
+    padding: 2.5%;
+    opacity: 50%;
+    margin: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+#banner ul li{
+    margin: 2%;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+#banner ul li a{
+    background-color: black;
+    display: inline-block;
+    width: 100%;
+    padding: 2%;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+#banner ul li a:hover{
+    background-color: silver;
+    color: black;
+}
+
+#banner ul li a:focus{
+    background-color: gray;
+    color: black;
+}
+
+#main{
+    width: 100%;
+    grid-area: main;
+    background-color: yellow;
+}
+
+#informacion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+#informacion h1{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+#conteiner{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+    grid-auto-rows: auto;
+    gap: 1%;
+}
+
+.card{
+    background-color: white;
+}
+
+.card figure{
+    width: 100%;
+}
+
+.card figure img{
+    width: 100%;
+}
+
+.card-content{
+    width: 100%;
+}
+
+.card-content h2{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.card-content p{
+    width: 100%;
+    padding: 2%;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#sponsors{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#sponsors h1{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+.content-sponsors{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+    grid-auto-rows: auto;
+    gap: 1%;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding-bottom: 5%;
+}
+
+.content-sponsors li{
+    text-align: center;
+}
+
+.content-sponsors li img{
+    width: 33%;
+}
+
+#newsletter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#newsletter h1{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.form_newsletter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_newsletter label{
+    padding: 1%;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.form_newsletter input{
+    padding: 0.5%;
+    margin: 0.5%;
+    width: 20%;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#footer{
+    width: 100%;
+    grid-area: footer;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "up_button up_button"
+                         "footer_navbar social_media"
+                         "copy_right copy_right";
+}
+
+#up_button{
+    grid-area: up_button;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#up_button a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 1%;
+    margin: 1%;
+    border: 1px solid gold;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+#up_button a:hover{
+    background-color: silver;
+    color: black;
+    font-weight: bold;
+}
+
+#up_button a:focus{
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+}
+
+#footer_navbar{
+    grid-area: footer_navbar;
+}
+
+#footer_navbar ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer_navbar ul li{
+    margin: 2%;
+    width: 15%;
+}
+
+#footer_navbar ul li a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 5%;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+#footer_navbar ul li a:hover{
+    background-color: silver;
+    color: black;
+    font-weight: bold;
+}
+
+#footer_navbar ul li a:focus{
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+}
+
+#social_media{
+    grid-area: social_media;
+}
+
+#social_media ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+#social_media ul li{
+    width: 20%;
+}
+
+#social_media ul li a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 2%;
+}
+
+#copy_right{
+    width: 100%;
+    grid-area: copy_right;
+}
+
+#copy_right p{
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    padding: 2%;
+}
+
+/*Pagina contacto*/
+#main-contact{
+    width: 100%;
+    grid-area: main;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main-contact h1{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.contact-container ul{
+    list-style-type: none;
+    width: 50%;
+    text-align: end;
+}
+
+.contact-container ul li{
+    padding: 2%;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.contact-container form{
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 2%;
+   background-color: silver;
+}
+
+.contact-container form label{
+    width: 100%;
+    padding: 2%;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.contact-container form input{
+    width: 50%;
+    padding: 1%;
+}
+
+.contact-location{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+}
+
+.contact-location iframe{
+    width: 100%;
+}
+
+/*Pagina Info*/
+
+#main-info{
+    width: 100%;
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-info h1{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+.info-details{
+    background-color: silver;
+    width: 80%;
+    margin: 2.5% 10%;
+    padding: 2.5%;
+    cursor: pointer;
+}
+
+.info-details summary{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+.info-details p{
+    width: 100%;
+    padding: 2%;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#covid-19{
+    width: 80%;
+    margin: 2.5% 10%;
+    padding: 2.5%;
+    background-color: silver;  
+}
+
+#covid-19 h1{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+#covid-19 p{
+    width: 100%;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/*Pagina Programa*/
+
+#main-programa{
+    width: 100%;
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-programa h1{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+#main-programa section{
+    width: 80%;
+    margin: 2.5% 10%;
+    padding: 2.5%;
+    background-color: silver;
+}
+
+#main-programa section h2{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+.container-video{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 5%;
+}
+
+.card-video{
+    width: 30%;
+}
+
+.card-video h3{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+.card-video iframe{
+    width: 100%;
+}
+
+.cronograma{
+    width: 100%;
+}
+
+.cronograma h3{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+.content-cronograma{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.content-cronograma ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 2%;
+}
+
+.content-cronograma ul li{
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/*Pagina expositores*/
+
+#main-expo{
+    background-color: gold;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-expo h1{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+#invitados-especiales{
+    width: 80%;
+    margin: 0 10% 5% 10%;
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#invitados-especiales h2{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+.container-card-ie{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.card-ie{
+    width: 20%;
+    margin: 5%;
+}
+
+.card-ie figure{
+    width: 100%;
+}
+
+.card-ie figure img{
+    width: 100%;
+}
+
+.card-ie p{
+    width: 100%;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#stands{
+    width: 80%;
+    margin: 0 10% 5% 10%;
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+}
+
+#stands figure{
+    width: 100%;
+}
+
+#stands figure img{
+    width: 100%;
+}
+
+#stands h2{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+.container-card-stands{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: top;
+}
+
+.card-stands{
+    width: 30%;
+    padding-bottom: 2%;
+}
+
+.card-stands ul{
+    width: 100%;
+    list-style-type: none;
+}
+
+.card-stands ul li{
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#artistas{
+    width: 80%;
+    margin: 0 10% 5% 10%;
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+}
+
+#artistas h2{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+.container-card-artistas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: top;
+}
+
+.card-artistas{
+    width: 40%;
+    padding-bottom: 2%;
+}
+
+.card-artistas h3{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+.card-artistas ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.card-artistas ul li{
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/*Formato Tablet*/
+@media (min-width:768px) and (max-width:1023px){
+    #header{
+        flex-direction: column;
+    }
+    #header h1{
+        font-size: 2rem;
+    }
+    
+    #header nav{
+        width: 100%;
+    }
+
+    #header nav ul li a{
+        font-size: 1rem;
+    }
+
+    #banner ul li{
+        font-size: 0.8rem;
+    }
+
+    #banner ul li a{
+        font-size: 0.8rem;
+    }
+
+    #informacion{
+        padding-bottom: 15%;
+    }
+
+    .contact-container{
+        flex-direction: column;
+    }
+
+    .contact-container ul{
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-details summary{
+        font-size: 1rem;
+    }
+
+    .card-video{
+        width: 47.5%;
+    }
+
+    #footer_navbar ul{
+        flex-direction: column;
+    }
+
+    #footer_navbar ul li{
+        width: 25%;
+    }
+
+    #social_media ul{
+        flex-direction: column;
+    }
+}
+
+/*Formato Mobile*/
+@media (max-width:767px){
+    #header{
+        flex-direction: column;
+        height: 22.5vh;
+    }
+
+    #header h1{
+        font-size: 1.6rem;
+    }
+    
+    #header nav{
+        width: 100%;
+    }
+
+    #header nav ul{
+        flex-direction: column;
+    }
+
+    #header nav ul li a{
+        font-size: 0.8rem;
+    }
+
+    #banner ul li{
+        font-size: 0.6rem;
+    }
+
+    #banner ul li a{
+        font-size: 0.6rem;
+    }
+
+    #informacion{
+        padding-bottom: 80%;
+    }
+
+    .content-sponsors{
+        padding-bottom: 30%;
+    }
+
+    .contact-container{
+        flex-direction: column;
+    }
+
+    .contact-container ul{
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-details summary{
+        font-size: 1rem;
+    }
+
+    .card-video{
+        width: 100%;
+    }
+
+    .content-cronograma{
+        flex-direction: column;
+    }
+
+    #footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "up_button"
+                             "footer_navbar"
+                             "social_media"
+                             "copy_right";
+    }
+
+    #footer_navbar ul{
+        flex-direction: column;
+    }
+
+    #footer_navbar ul li{
+        width: 25%;
+    }
+}
